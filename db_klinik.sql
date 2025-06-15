@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 08 Mar 2025 pada 10.59
--- Versi server: 10.4.32-MariaDB
--- Versi PHP: 8.2.12
+-- Generation Time: Jun 15, 2025 at 04:55 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `dokter`
+-- Table structure for table `dokter`
 --
 
 CREATE TABLE `dokter` (
@@ -34,7 +34,7 @@ CREATE TABLE `dokter` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `dokter`
+-- Dumping data for table `dokter`
 --
 
 INSERT INTO `dokter` (`kode_dokter`, `nama_dokter`, `poli`) VALUES
@@ -49,7 +49,25 @@ INSERT INTO `dokter` (`kode_dokter`, `nama_dokter`, `poli`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pasien`
+-- Table structure for table `login_klinik`
+--
+
+CREATE TABLE `login_klinik` (
+  `username` varchar(50) NOT NULL,
+  `password` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `login_klinik`
+--
+
+INSERT INTO `login_klinik` (`username`, `password`) VALUES
+('rana', '827ccb0eea8a706c4c34a16891f84e7b');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pasien`
 --
 
 CREATE TABLE `pasien` (
@@ -61,27 +79,32 @@ CREATE TABLE `pasien` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `pasien`
+-- Dumping data for table `pasien`
 --
 
 INSERT INTO `pasien` (`no_pasien`, `nama_pasien`, `alamat`, `hp`, `kode_dokter`) VALUES
 ('P01', 'Ameng', 'Bojonegoro', '085886508345', '002'),
 ('P02', 'Cibe', 'Jonggol', '085886508345', '003'),
-('P03', 'Palpale', 'Bozong Zengkol', '08589765933', '004'),
-('P04', 'Abdu', 'Perum Cipto', '0867-3493-858', '001');
+('P03', 'Abdu', 'Cipto', '0867-3493-858', '001');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `dokter`
+-- Indexes for table `dokter`
 --
 ALTER TABLE `dokter`
   ADD PRIMARY KEY (`kode_dokter`);
 
 --
--- Indeks untuk tabel `pasien`
+-- Indexes for table `login_klinik`
+--
+ALTER TABLE `login_klinik`
+  ADD PRIMARY KEY (`username`);
+
+--
+-- Indexes for table `pasien`
 --
 ALTER TABLE `pasien`
   ADD PRIMARY KEY (`no_pasien`),
