@@ -17,16 +17,19 @@
                 <li class="dropdown">
                     <a href="#">Halaman Dokter</a>
                     <ul class="dropdown-menu">
-                        <li><a href="../index.php">Form Data Dokter</a></li>
-                        <li><a href="../tampilan_dokter.php">Data Dokter</a></li>
+                        <li><a href="../admin/dokter/index_dokter.php">Form Data Dokter</a></li>
+                        <li><a href="../admin/dokter/tampilan_dokter.php">Data Dokter</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#">Halaman Pasien</a>
                     <ul class="dropdown-menu">
-                        <li><a href="../pasien/index_pasien.php">Form Data Pasien</a></li>
-                        <li><a href="../pasien/tampilan_pasien.php">Data Pasien</a></li>
+                        <li><a href="../admin/pasien/index_pasien.php">Form Data Pasien</a></li>
+                        <li><a href="../admin/pasien/tampilan_pasien.php">Data Pasien</a></li>
                     </ul>
+                </li>
+                <li>
+                <a href="../logout.php" class="btn btn-danger" style="padding: 10px 20px; background-color: red; color: white; border: none; border-radius: 5px; text-decoration: none;">Logout</a>
                 </li>
             </ul>
         </nav>
@@ -54,8 +57,8 @@
                     <h4>Navigation</h4>
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="../tampilan_dokter.php">Data Dokter</a></li>
-                        <li><a href="../pasien/tampilan_pasien.php">Data Pasien</a></li>
+                        <li><a href="../admin/dokter/">Data Dokter</a></li>
+                        <li><a href="../admin/pasien/tampilan_pasien.php">Data Pasien</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
